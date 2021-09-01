@@ -307,14 +307,69 @@ Featured Tours
 .tours-center {
   margin: 0 2rem;
 }
+.tour {
+  transition: var(--transition);
+  background: var(--clr-grey-10);
+  box-shadow: var(--light-shadow);
+  margin-bottom: 2rem;
+}
+.tour:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02);
+}
+.tour-photo {
+  height: 15rem;
+  object-fit: cover;
+}
 .tour-img-container {
   position: relative;
 }
 .tour-date {
   position: absolute;
-  background-color: var(--clr-primary-8);
-  bottom: 0;
+  top: 0;
   right: 0;
+  background-color: var(--clr-primary-7);
+  padding: 0.25rem;
+  text-transform: capitalize;
+  color: var(--clr-primary-1);
+}
+.tour-content {
+  padding: 1.25rem 1.5rem;
+}
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tour-footer p {
+  line-height: 0;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  color: var(--clr-primary-5);
+}
+
+.tour-icon {
+  color: var(--clr-primary-5);
+  text-transform: capitalize;
+}
+.tour-btn {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .tours-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .tour {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .tour {
+    flex: 0 0 calc(33.333% - 2rem);
+  }
 }
 /*
 =============== 
